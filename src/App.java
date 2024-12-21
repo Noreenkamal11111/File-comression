@@ -3,7 +3,7 @@ import java.io.IOException;
 public class App {
     public static void main(String[] args) throws IOException {
 
-            hhh sss = new hhh();
+            fileClass sss = new fileClass();
             String ss = sss.FileToString("C:\\Users\\dell\\OneDrive\\Desktop\\a3333lmslkv.txt");
             bintree lala = new bintree();
             String aura = lala.encode(ss);

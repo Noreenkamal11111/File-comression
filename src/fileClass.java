@@ -1,7 +1,7 @@
 import java.io.FileInputStream;
 import java.io.IOException;
 
-class hhh{
+class fileClass{
     public String FileToString(String path) throws IOException{
         FileInputStream filess = new FileInputStream(path);
         int data;
