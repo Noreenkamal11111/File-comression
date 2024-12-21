@@ -56,19 +56,13 @@ public class bintree{
         if (node == null) {
             return;
         }
-    
-        // If it's a leaf node, add the character and its corresponding code to the map
         if (node.left == null && node.right == null) {
             encodedmap.put(node.cr, currentCode.toString());
             System.out.println("Added to map: " + node.cr + " -> " + currentCode);
             return;
         }
-    
-        // Traverse the left subtree (append '0' to the code)
         currentCode.append('0');
         mapping(node.left, encodedmap, currentCode);
-    
-        // Backtrack and remove the last '0' added
         currentCode.deleteCharAt(currentCode.length() - 1);
     
         // Traverse the right subtree (append '1' to the code)
