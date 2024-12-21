@@ -1,9 +1,10 @@
-
+import java.io.IOException;
 
 public class App {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
-            String ss = "lalaland hellos world \n gggg";
+            hhh sss = new hhh();
+            String ss = sss.FileToString("C:\\Users\\dell\\OneDrive\\Desktop\\a3333lmslkv.txt");
             bintree lala = new bintree();
             String aura = lala.encode(ss);
             System.out.println(aura);
