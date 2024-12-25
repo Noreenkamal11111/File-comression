@@ -40,8 +40,13 @@ public class bintree{
                 pq.add(newnode);
             }
             head = pq.poll();
-
-            mapping(head, encodedmap,currentCode );
+            if(head.cr != '\0'){
+                encodedmap.put(head.cr, "1");
+            }
+            else{
+                mapping(head, encodedmap,currentCode );
+            }
+           
 
             for (int i=0 ; i< ss.length() ; i++) {
                 char crr = ss.charAt(i);
@@ -52,7 +57,6 @@ public class bintree{
 }
 
     private void mapping(charfreq node, HashMap<Character, String> encodedmap, StringBuilder currentCode) {
-        // Base case: if the node is null, return
         if (node == null) {
             return;
         }
