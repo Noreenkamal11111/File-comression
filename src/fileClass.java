@@ -44,10 +44,7 @@ class fileClass{
 
         String recoveredBinaryString = binaryStringBuilder.toString();
 
-        String finalBinaryString = recoveredBinaryString.substring(paddingLength);
-
-        System.out.println("Recovered Binary String: " + finalBinaryString);
-    
+        String finalBinaryString = recoveredBinaryString.substring(paddingLength);    
         return finalBinaryString;
     }
     

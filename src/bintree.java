@@ -62,18 +62,15 @@ public class bintree{
         }
         if (node.left == null && node.right == null) {
             encodedmap.put(node.cr, currentCode.toString());
-            System.out.println("Added to map: " + node.cr + " -> " + currentCode);
             return;
         }
         currentCode.append('0');
         mapping(node.left, encodedmap, currentCode);
         currentCode.deleteCharAt(currentCode.length() - 1);
-    
-        // Traverse the right subtree (append '1' to the code)
+
         currentCode.append('1');
         mapping(node.right, encodedmap, currentCode);
-    
-        // Backtrack and remove the last '1' added
+
         currentCode.deleteCharAt(currentCode.length() - 1);
     }
     
